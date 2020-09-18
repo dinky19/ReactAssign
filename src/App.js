@@ -65,6 +65,31 @@ class App extends Component {
   evaluate = () => {
     this.setState.currentNumber = this.state.input;
 
+    if (this.state.operator === "plus") {
+      this.setState({
+        input:
+          parseInt(this.state.previousNumber) +
+          parseInt(this.state.currentNumber)
+      });
+    } else if (this.state.operator === "subtract") {
+      this.setState({
+        input:
+          parseInt(this.state.previousNumber) -
+          parseInt(this.state.currentNumber)
+      });
+    } else if (this.state.operator === "multiply") {
+      this.setState({
+        input:
+          parseInt(this.state.previousNumber) *
+          parseInt(this.state.currentNumber)
+      });
+    } else if (this.state.operator === "divide") {
+      this.setState({
+        input:
+          parseInt(this.state.previousNumber) /
+          parseInt(this.state.currentNumber)
+      });
+
     
     }
   };
